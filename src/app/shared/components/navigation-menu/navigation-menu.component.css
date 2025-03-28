@@ -1,0 +1,33 @@
+ul {
+    display: flex;
+    gap: 64px;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+ul>a {
+    text-decoration: none;
+}
+
+ul>a>li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul>a>li>span {
+    font-size: 1em;
+}
+
+@media (width < 1080px) {
+    ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-around;
+    }
+}

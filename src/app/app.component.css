@@ -1,0 +1,51 @@
+:host {
+    display: grid;
+    grid-template-areas:
+        "header header header header header"
+        "main main main main main"
+    ;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 15vh 85vh;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    grid-area: header;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 70%;
+}
+
+main {
+    grid-area: main;
+}
+
+@media (width <= 1080px) {
+    
+    :host {
+        grid-template-areas: 
+        "main main main"
+        "footer footer footer";
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 90vh 10vh;
+    }
+
+    header {
+
+        border-top: 1px dotted gray;
+        grid-area: footer;
+
+        & h1 {
+            display: none;
+        }
+
+    }
+}

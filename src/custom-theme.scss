@@ -6,13 +6,18 @@
 
 @include mat.core();
 
+$light-text-color: #40967c;
+$dark-text-color: white;
+
 :root {
   @include mat.all-component-themes(themes.$light-theme);
+  color: $light-text-color;
 }
 
 // Change to dark mode if user prefers it
 @media(prefers-color-scheme: dark) {
   :root {
     @include mat.all-component-colors(themes.$dark-theme);
+    color: $dark-text-color;
   }
 }

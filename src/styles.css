@@ -2,9 +2,19 @@
     font-family: Roboto, "Helvetica Neue", sans-serif;
     color-scheme: light dark;
     height: 100vh;
+
 }
 
-@media (width <= 1080px) {
+a {
+    color: var(--primary-color);
+}
+
+.ti {
+    /* Tabler icons */
+    font-size: 2em;
+}
+
+@media (width <=1080px) {
     :root {
         font-size: .7em;
     }
